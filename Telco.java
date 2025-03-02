@@ -4,7 +4,6 @@ public class Telco implements TelcoSubscription {
     private int dateAllowance;
     private boolean unliCallText;
 
-    // Corrected constructor with parameters in correct order
     public Telco(String telcoName, double promoPrice, int dateAllowance, boolean unliCallText) {
         this.telcoName = telcoName;
         this.promoPrice = promoPrice;
@@ -12,18 +11,17 @@ public class Telco implements TelcoSubscription {
         this.unliCallText = unliCallText;
     }
 
+    @Override
     public String getTelcoName() {
         return telcoName;
     }
 
+    @Override
     public double getPromoPrice() {
         return promoPrice;
     }
 
-    public int getDateAllowance() {
-        return dateAllowance;
-    }
-
+    @Override
     public boolean getUnliCallText() {
         return unliCallText;
     }
